@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tutorial.uswatunhasanah.HelloController">
+    <top>
+        <HBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #FFF7D1;" BorderPane.alignment="CENTER">
+            <Label text="Aplikasi CRUD Mahasiswa">
+                <font>
+                    <Font name="System Bold" size="19.0" />
+                </font>
+            </Label>
+        </HBox>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: FFECC8;" BorderPane.alignment="CENTER">
+            <HBox alignment="CENTER" spacing="10.0">
+                <Label text="Name:" />
+                <TextField fx:id="nameField" />
+                <Label text="Jurusan:" />
+                <TextField fx:id="jurusanField" />
+            </HBox>
+            <HBox alignment="CENTER" spacing="10.0">
+                <Label text="Angkatan:" />
+                <TextField fx:id="angkatanField" />
+                <Label text="IPK:" />
+                <TextField fx:id="ipkField" />
+            </HBox>
+            <HBox alignment="CENTER" spacing="10.0">
+                <Button fx:id="tambahButton" onAction="#btnTambah" prefHeight="27.0" prefWidth="69.0" style="-fx-background-color: #FFD09B;" text="Tambah" />
+                <Button fx:id="ubahButton" onAction="#btnUbah" prefHeight="27.0" prefWidth="61.0" style="-fx-background-color: #FFD09B;" text="Ubah" />
+                <Button fx:id="hapusButton" onAction="#btnHapus" prefHeight="27.0" prefWidth="58.0" style="-fx-background-color: #FFD09B;" text="Hapus" />
+                <Button fx:id="resetButton" onAction="#btnReset" prefHeight="27.0" prefWidth="60.0" style="-fx-background-color: #FFD09B;" text="Reset" />
+            </HBox>
+            <TableView fx:id="tableView" prefHeight="200.0" prefWidth="500.0" style="-fx-background-color: #FFFAEC;">
+                <columns>
+                    <TableColumn fx:id="namaColumn" minWidth="0.0" prefWidth="175.30437469482422" text="Nama" />
+                    <TableColumn fx:id="jurusanColumn" prefWidth="150.0" text="Jurusan" />
+                    <TableColumn fx:id="angkatanColumn" prefWidth="100.0" text="Angkatan" />
+                    <TableColumn fx:id="ipkColumn" prefWidth="100.0" text="IPK" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-background-color: #FFF7D1;" BorderPane.alignment="CENTER">
+            <Label text="© 2025 CRUD Mahasiswa - All Rights Reserved" />
+        </HBox>
+    </bottom>
+</BorderPane>
